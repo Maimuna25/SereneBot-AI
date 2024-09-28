@@ -42,7 +42,7 @@ def preprocess_input(text):
 # Define the get_response function
 def get_response(user_input):
     cleaned_input = preprocess_input(user_input)
-    for key, value in cleaned_responses.items():
+    for key,value in cleaned_responses.items():
         for question in value.get("questions", []):
             cleaned_question = set(question.split())
             if cleaned_question.issubset(cleaned_input):
